@@ -2,13 +2,12 @@
 session_start();
 include 'config.php';
 
-// Vérifier que l'utilisateur est bien connecté
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.html");
     exit();
 }
 
-// Récupérer les infos de l'utilisateur connecté
+
 $requete = $conn->prepare("SELECT email FROM etudiants WHERE id = ?");
 $requete->bind_param("i", $_SESSION['user_id']);
 $requete->execute();
