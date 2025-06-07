@@ -1,2 +1,2 @@
 # My-ensi-espace
-site qui contient une base de donnes des etudiants de l'ENSI (noms,mails,mot de passe) et qui a chaque connexion s'il est dans la base il aura accès a la page suivante si non il sort un message "mot de passe incorrecte",ou bien il creer un compte qui sera enregistré dans la meme base
+Ce site contient une base de données des étudiants de l'ENSI (noms, emails, mots de passe). À chaque connexion, le système vérifie si l’utilisateur existe dans la base : s’il est reconnu avec le bon mot de passe, il accède à la page suivante (dashboard), sinon un message « mot de passe incorrect » s’affiche. L’utilisateur peut aussi créer un compte, qui sera enregistré dans la même base de données pour une future connexion.
