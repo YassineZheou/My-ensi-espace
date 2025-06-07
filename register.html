@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription ENSI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <img src="ensi logo.png" alt="Logo ENSI" class="logo">
+    <h2>Créer un compte étudiant</h2>
+
+    <?php if ($message): ?>
+      <p style="color: green; font-weight: bold;"><?php echo $message; ?></p>
+    <?php endif; ?>
+
+    <form action="register.php" method="post">
+      <input type="text" name="nom" placeholder="Nom complet" required>
+      <input type="email" name="email" placeholder="Adresse email" required>
+      <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+      <button type="submit">S'inscrire</button>
+    </form>
+    <p>Déjà un compte ? <a href="login.html">Connexion</a></p>
+  </div>
+</body>
+</html>

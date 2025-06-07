@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion - Espace Perso ENSI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <!-- Logo ENSI ajouté ici -->
+    <img src="ensi logo.png" alt="Logo ENSI" class="logo" />
+    
+    <h2>Connexion Étudiant</h2>
+    <form action="login.php" method="POST" id="loginForm">
+      <input type="email" name="email" placeholder="Email ENSI" required />
+      <input type="password" name="password" placeholder="Mot de passe" required />
+      <button type="submit">Se connecter</button>
+    </form>
+    <p id="error-msg"></p>
+  </div>
+</body>
+</html>
