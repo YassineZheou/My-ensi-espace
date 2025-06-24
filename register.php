@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mot_de_passe = $_POST["mot_de_passe"];
 
     $sql = "INSERT INTO etudiants (nom, email, mot_de_passe) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
+    $r1 = $conn->prepare($sql);
     $stmt->bind_param("sss", $nom, $email, $mot_de_passe);
 
     try {
-        $stmt->execute();
+        $r1->execute();
         $message = "✅ Inscription réussie ! <a href='login.html'>Se connecter</a>";
     } catch (mysqli_sql_exception $e) {
         if ($conn->errno === 1062) {
