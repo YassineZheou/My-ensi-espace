@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO etudiants (nom, email, mot_de_passe) VALUES (?, ?, ?)";
     $r1 = $conn->prepare($sql);
-    $stmt->bind_param("sss", $nom, $email, $mot_de_passe);
+    $r1->bind_param("sss", $nom, $email, $mot_de_passe);
 
     try {
         $r1->execute();
